@@ -13,6 +13,7 @@ const mainTheme = {
 
   dimensions: {
     headerHeight: '8rem',
+    footerHeight: '5rem',
   },
 
   up: (breakpoint: string, vertical = false) =>

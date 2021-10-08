@@ -1,9 +1,9 @@
-import { HeaderStyle } from "./Header.style";
+import { HeaderStyle, LogoStyle } from "./Header.style";
 
 export const Header = () => {
   return (
     <HeaderStyle>
-      <p>logo</p>
+      <LogoStyle>Movie Tindr</LogoStyle>
     </HeaderStyle>
   );
 };
