@@ -1,10 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
-  :root {
-    --first-color: #ff8;
-    --second-color: #000;
-  }
   *, *::after, *::before {
     padding: 0px;
     margin: 0px;
