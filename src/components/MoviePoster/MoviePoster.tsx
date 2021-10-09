@@ -1,5 +1,12 @@
 import { MoviePosterStyle } from "./MoviePoster.style";
 
-export const MoviePoster = () => {
-  return <MoviePosterStyle />
+type MoviePosterProps = {
+  src: string
+}
+export const MoviePoster = ({src}: MoviePosterProps) => {
+  return (
+    <MoviePosterStyle
+      src={src}
+    />
+  );
 };
