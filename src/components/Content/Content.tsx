@@ -1,5 +1,5 @@
 import { Details } from "../Details/Details";
-import { MoviePoster } from "../MoviePoster/Image";
+import { MoviePoster } from "../MoviePoster/MoviePoster";
 import { ContentStyle } from "./Content.style";
 
 export const Content = () => {
