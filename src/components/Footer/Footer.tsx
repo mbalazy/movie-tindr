@@ -1,5 +1,5 @@
 import { FooterStyle } from "./Footer.style";
 
 export const Footer = () => {
-  return <FooterStyle>Awesome Footer</FooterStyle>;
+  return <FooterStyle>created by mbalazy</FooterStyle>;
 };

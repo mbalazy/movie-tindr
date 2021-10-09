@@ -12,7 +12,3 @@ export const MainStyle = styled.div`
   display: grid;
   place-content: center;
 `;
-export const Content = styled.div`
-  max-width: 100rem;
-  padding: 15rem 10rem;
-`
