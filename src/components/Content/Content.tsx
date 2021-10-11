@@ -1,16 +1,18 @@
 import { DUMMY_DATA } from "../../DATA";
+import { Buttons } from "../Buttons/Buttons";
 import { Details } from "../Details/Details";
 import { MoviePoster } from "../MoviePoster/MoviePoster";
-import { ContentStyle } from "./Content.style";
+import { ContentWrapper } from "./Content.style";
 
 export const Content = () => {
   const movie = DUMMY_DATA[0];
-  const src = movie.imageUrl;
+  const { title, rating, summary, imageUrl} = movie;
 
   return (
-    <ContentStyle>
-      <MoviePoster src={src} />
-      <Details />
-    </ContentStyle>
+    <ContentWrapper>
+      <MoviePoster src={imageUrl} />
+      <Details title={title} rating={rating} summary={summary} />
+      <Buttons />
+    </ContentWrapper>
   );
 };
