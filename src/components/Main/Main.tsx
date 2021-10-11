@@ -1,7 +1,7 @@
 import { MovieCart } from "../MovieCart/MovieCart";
-import { MainStyle, MainWrapper } from "./Main.style";
+import { MainInnerWrapper, MainWrapper } from "./Main.style";
 import SwappableCard from "react-tinder-card";
-import { DUMMY_DATA } from "../../DATA";
+import { useMovie } from "../../state/useMovie";
 
 const onSwipe = (direction: string) => {
   console.log("You swiped: " + direction);
@@ -12,20 +12,22 @@ const onCardLeftScreen = (myIdentifier: string) => {
 };
 
 export const Main = () => {
-  const movies = DUMMY_DATA;
+  const { state } = useMovie();
+  const moviesInRightOrder = state.allMovies.slice().reverse();
 
   return (
-    <MainWrapper className='cardContainer'>
-      {movies.map((movie) => {
+    <MainWrapper>
+      {moviesInRightOrder.map((movie) => {
         return (
           <SwappableCard
+            key={movie.id}
             onSwipe={onSwipe}
             onCardLeftScreen={() => onCardLeftScreen(movie.title)}
             preventSwipe={["right"]}
           >
-            <MainStyle>
+            <MainInnerWrapper>
               <MovieCart {...movie} />
-            </MainStyle>
+            </MainInnerWrapper>
           </SwappableCard>
         );
       })}

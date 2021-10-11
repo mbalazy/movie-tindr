@@ -21,4 +21,19 @@ export interface RejectMovie {
   payload: { movie: IMovie };
 }
 
+export const setMovies = (movies: IMovie[]): SetMovies => ({
+  type: ActionType.SetMovies,
+  payload: { movies },
+});
+
+export const rejectMovie = (movie: IMovie): RejectMovie => ({
+  type: ActionType.RejectMovie,
+  payload: { movie },
+});
+
+export const acceptMovie = (movie: IMovie): AcceptMovie => ({
+  type: ActionType.AcceptMovie,
+  payload: { movie },
+});
+
 export type MoviesActions = SetMovies | AcceptMovie | RejectMovie;

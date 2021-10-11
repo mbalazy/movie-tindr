@@ -12,7 +12,7 @@ export const MainWrapper = styled.main`
   `}
 `;
 
-export const MainStyle = styled.div`
+export const MainInnerWrapper = styled.div`
   background-color: ${({ theme }) => theme.colors.white};
   position: absolute;
   margin-left: auto;
