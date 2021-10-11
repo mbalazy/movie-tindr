@@ -7,7 +7,7 @@ const mainTheme = {
   fontSize: {
     s: '1.5rem',
     m: '1.6rem',
-    l: '1.8rem',
+    l: '2rem',
     xl: '2.4rem',
   },
 
@@ -22,7 +22,7 @@ const mainTheme = {
     `@media (max-${vertical ? 'height' : 'width'}: ${breakpoint})`,
 
   breakpoints: {
-    l: '900px',
+    l: '1024px',
     m: '767px',
     s: '480px',
   },

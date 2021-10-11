@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const ContentWrapper = styled.div`
   width: 80vw;
@@ -7,4 +7,12 @@ export const ContentWrapper = styled.div`
   grid-template-columns: 3fr 2fr 18rem;
   grid-template-rows: 16rem 20rem 10rem;
   gap: 6rem;
-`
+
+  ${({ theme: { down, breakpoints } }) => css`
+    ${down(breakpoints.l)} {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 14rem 10rem 24rem 10rem;
+      gap: 2.4rem;
+    }
+  `}
+`;

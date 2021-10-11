@@ -11,7 +11,9 @@ export const Details = ({ title, rating, summary }: DetailsProps) => {
     <>
       <MovieTitle>{title}</MovieTitle>
       <MovieRating>{rating}/10</MovieRating>
-      <MovieSummary>{summary}</MovieSummary>
+      <MovieSummary>
+        <p>{summary}</p>
+      </MovieSummary>
     </>
   );
 };

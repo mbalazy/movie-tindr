@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 const ButtonsBaseStyle = styled.button`
   height: 5rem;
@@ -19,6 +19,13 @@ const ButtonsBaseStyle = styled.button`
     transform: scale(1) translateY(0px);
     box-shadow: 0px 6px 21px 1px rgba(0, 0, 0, 0.14);
   }
+
+  ${({ theme: { down, breakpoints } }) => css`
+    ${down(breakpoints.l)} {
+      width: 80%;
+      place-self: center;
+    }
+  `}
 `;
 
 export const RejectButton = styled(ButtonsBaseStyle)`
