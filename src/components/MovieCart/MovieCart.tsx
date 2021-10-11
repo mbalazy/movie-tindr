@@ -1,18 +1,22 @@
-import { DUMMY_DATA } from "../../DATA";
 import { Buttons } from "../Buttons/Buttons";
 import { Details } from "../Details/Details";
 import { MoviePoster } from "../MoviePoster/MoviePoster";
-import { ContentWrapper } from "./Content.style";
+import { MovieCartWrapper } from "./MovieCart.style";
 
-export const Content = () => {
-  const movie = DUMMY_DATA[0];
-  const { title, rating, summary, imageUrl} = movie;
+type ContentProps = {
+  imageUrl: string;
+  title: string;
+  rating: string;
+  summary: string;
+};
 
+export const MovieCart = ({ title, rating, summary, imageUrl }: ContentProps) => {
   return (
-    <ContentWrapper>
+    <MovieCartWrapper >
       <MoviePoster src={imageUrl} />
       <Details title={title} rating={rating} summary={summary} />
       <Buttons />
-    </ContentWrapper>
+    </MovieCartWrapper>
   );
 };
+

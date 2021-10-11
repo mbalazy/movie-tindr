@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-export const ContentWrapper = styled.div`
+export const MovieCartWrapper = styled.div`
   width: 80vw;
   max-width: 100rem;
   display: grid;

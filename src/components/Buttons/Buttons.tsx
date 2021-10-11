@@ -1,10 +1,11 @@
-import { AcceptButton, RejectButton } from "./Buttons.style"
+import { AcceptButton, RejectButton } from "./Buttons.style";
 
-export const Buttons  = () => {
+export const Buttons = () => {
+  const remove = () => {};
   return (
     <>
-      <RejectButton>Reject</RejectButton>
-      <AcceptButton>Accept</AcceptButton>
+      <RejectButton onClick={() => remove()}>Reject</RejectButton>
+      <AcceptButton onClick={() => remove()}>ccept</AcceptButton>
     </>
-  )
-}
+  );
+};
