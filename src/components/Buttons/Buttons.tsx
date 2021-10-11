@@ -5,7 +5,7 @@ export const Buttons = () => {
   return (
     <>
       <RejectButton onClick={() => remove()}>Reject</RejectButton>
-      <AcceptButton onClick={() => remove()}>ccept</AcceptButton>
+      <AcceptButton onClick={() => remove()}>Accept</AcceptButton>
     </>
   );
 };

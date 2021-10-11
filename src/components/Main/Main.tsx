@@ -22,7 +22,6 @@ export const Main = () => {
             onSwipe={onSwipe}
             onCardLeftScreen={() => onCardLeftScreen(movie.title)}
             preventSwipe={["right"]}
-            flickOnSwipe={true}
           >
             <MainStyle>
               <MovieCart {...movie} />
