@@ -2,18 +2,31 @@ import { MovieCart } from "../MovieCart/MovieCart";
 import { MainInnerWrapper, MainWrapper } from "./Main.style";
 import SwappableCard from "react-tinder-card";
 import { useMovie } from "../../state/useMovie";
+import { acceptMovie, rejectMovie } from "../../state/actions";
 
-const onSwipe = (direction: string) => {
-  console.log("You swiped: " + direction);
-};
-
-const onCardLeftScreen = (myIdentifier: string) => {
-  console.log(myIdentifier + " left the screen");
-};
+type Directions = "left" | "right" | "up" | "down";
 
 export const Main = () => {
-  const { state } = useMovie();
-  const moviesInRightOrder = state.allMovies.slice().reverse();
+  const { state, dispatch } = useMovie();
+
+  let moviesInRightOrder = state.allMovies.slice().reverse();
+  let currentMovie = state.allMovies[0];
+
+  const reject = () => dispatch(rejectMovie(currentMovie));
+  const accept = () => dispatch(acceptMovie(currentMovie));
+
+  const onSwipe = (direction: Directions) => {
+    switch (direction) {
+      case "left":
+        return reject();
+      case "up":
+        return accept();
+      case "down":
+        return reject();
+      default:
+        return;
+    }
+  };
 
   return (
     <MainWrapper>
@@ -22,7 +35,6 @@ export const Main = () => {
           <SwappableCard
             key={movie.id}
             onSwipe={onSwipe}
-            onCardLeftScreen={() => onCardLeftScreen(movie.title)}
             preventSwipe={["right"]}
           >
             <MainInnerWrapper>
