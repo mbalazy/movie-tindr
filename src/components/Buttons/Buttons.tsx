@@ -11,8 +11,12 @@ export const Buttons = () => {
 
   return (
     <>
-      <RejectButton onTouchEnd={() => reject()}>Reject</RejectButton>
-      <AcceptButton onTouchEnd={() => accept()}>Accept</AcceptButton>
+      <RejectButton onClick={reject} onTouchEnd={reject}>
+        Reject
+      </RejectButton>
+      <AcceptButton onClick={accept} onTouchEnd={accept}>
+        Accept
+      </AcceptButton>
     </>
   );
 };

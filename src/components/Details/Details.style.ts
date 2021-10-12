@@ -32,7 +32,7 @@ export const MovieSummary = styled.div`
     ${down(breakpoints.l)} {
       grid-column: 1 / -1;
       grid-row: 3 / span 1;
-      width: 100%;
+      width: 97%;
     }
   `}
 `;
