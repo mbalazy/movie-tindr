@@ -14,14 +14,18 @@ export const useMovie = () => {
   const { dispatch, state } = context;
   const currentMovie = state.allMovies[0];
 
-  const reject = () => {
-    axios.put(`${myBackendUrl}/recommendations/${currentMovie.id}/accept`);
+  const reject = async () => {
     dispatch(rejectMovie(currentMovie));
+    await axios.put(
+      `${myBackendUrl}/recommendations/${currentMovie.id}/accept`
+    );
   };
 
-  const accept = () => {
-    axios.put(`${myBackendUrl}/recommendations/${currentMovie.id}/reject`);
+  const accept = async () => {
     dispatch(acceptMovie(currentMovie));
+    await axios.put(
+      `${myBackendUrl}/recommendations/${currentMovie.id}/reject`
+    );
   };
 
   return { dispatch, reject, accept, currentMovie };
