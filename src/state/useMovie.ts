@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { acceptMovie, rejectMovie } from "./actions";
 import { MovieContext } from "./context";
 
 export const useMovie = () => {
@@ -6,5 +7,12 @@ export const useMovie = () => {
   if (context === undefined) {
     throw new Error("useContext must be used within Provider");
   }
-  return context;
+
+  const { dispatch, state } = context;
+  const currentMovie = state.allMovies[0];
+
+  const reject = () => dispatch(rejectMovie(currentMovie));
+  const accept = () => dispatch(acceptMovie(currentMovie));
+
+  return { context, reject, accept, currentMovie };
 };
