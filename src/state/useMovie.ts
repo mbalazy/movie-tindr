@@ -1,6 +1,9 @@
+import axios from "axios";
 import { useContext } from "react";
 import { acceptMovie, rejectMovie } from "./actions";
 import { MovieContext } from "./context";
+
+const myBackendUrl = "https://mybackendapi.com/";
 
 export const useMovie = () => {
   const context = useContext(MovieContext);
@@ -11,8 +14,15 @@ export const useMovie = () => {
   const { dispatch, state } = context;
   const currentMovie = state.allMovies[0];
 
-  const reject = () => dispatch(rejectMovie(currentMovie));
-  const accept = () => dispatch(acceptMovie(currentMovie));
+  const reject = () => {
+    axios.put(`${myBackendUrl}/recommendations/${currentMovie.id}/accept`);
+    dispatch(rejectMovie(currentMovie));
+  };
+
+  const accept = () => {
+    axios.put(`${myBackendUrl}/recommendations/${currentMovie.id}/reject`);
+    dispatch(acceptMovie(currentMovie));
+  };
 
   return { dispatch, reject, accept, currentMovie };
 };

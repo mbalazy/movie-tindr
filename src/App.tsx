@@ -9,8 +9,20 @@ import { useMovie } from "./state/useMovie";
 function App() {
   const { dispatch } = useMovie();
 
+  // Normally I will use axios to download movies data
+  /* const getMovies = async () => {
+    try {
+      const movies = await axios.get("mybackendurl");
+      dispatch(setMovies(movies));
+    } catch (error) {
+      console.error(error);
+    }
+  }; */
+
+  const getMovies = () => dispatch(setMovies(DUMMY_DATA));
+
   useEffect(() => {
-    dispatch(setMovies(DUMMY_DATA));
+    getMovies();
   }, []);
 
   return (
