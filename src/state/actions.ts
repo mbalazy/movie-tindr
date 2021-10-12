@@ -36,4 +36,4 @@ export const acceptMovie = (movie: IMovie): AcceptMovie => ({
   payload: { movie },
 });
 
-export type MoviesActions = SetMovies | AcceptMovie | RejectMovie;
+export type MovieActions = SetMovies | AcceptMovie | RejectMovie;

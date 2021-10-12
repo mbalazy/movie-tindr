@@ -1,10 +1,10 @@
-import { ActionType, MoviesActions } from "./actions";
-import { MoviesState } from "./state";
+import { ActionType, MovieActions } from "./actions";
+import { MovieState } from "./state";
 
 export function movieReducer(
-  state: MoviesState,
-  action: MoviesActions
-): MoviesState {
+  state: MovieState,
+  action: MovieActions
+): MovieState {
   switch (action.type) {
     case ActionType.SetMovies:
       return { ...state, allMovies: action.payload.movies };

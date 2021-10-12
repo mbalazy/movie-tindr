@@ -1,21 +1,21 @@
 import { createContext, useReducer } from "react";
-import { MoviesActions } from "./actions";
+import { MovieActions } from "./actions";
 import { movieReducer } from "./reducer";
-import { initialMoviesState, MoviesState } from "./state";
+import { initialMoviesState, MovieState } from "./state";
 
 export const MovieContext = createContext<{
-  state: MoviesState;
-  dispatch: React.Dispatch<MoviesActions>;
+  state: MovieState;
+  dispatch: React.Dispatch<MovieActions>;
 }>({
   state: initialMoviesState,
   dispatch: () => undefined,
 });
 
-type MenuProviderProps = {
+type MovieProviderProps = {
   children: JSX.Element | JSX.Element[];
 };
 
-export const MoviesProvider = ({ children }: MenuProviderProps) => {
+export const MovieProvider = ({ children }: MovieProviderProps) => {
   const [state, dispatch] = useReducer(movieReducer, initialMoviesState);
 
   return (

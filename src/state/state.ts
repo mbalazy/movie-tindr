@@ -6,12 +6,12 @@ export type IMovie = {
     rating: string;
 }
 
-export interface MoviesState {
+export interface MovieState {
   allMovies: IMovie[];
   favouriteMovies: IMovie[];
 }
 
-export const initialMoviesState: MoviesState = {
+export const initialMoviesState: MovieState = {
   allMovies: [],
   favouriteMovies: [],
 };
