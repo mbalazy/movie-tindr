@@ -14,5 +14,5 @@ export const useMovie = () => {
   const reject = () => dispatch(rejectMovie(currentMovie));
   const accept = () => dispatch(acceptMovie(currentMovie));
 
-  return { context, reject, accept, currentMovie };
+  return { dispatch, reject, accept, currentMovie };
 };

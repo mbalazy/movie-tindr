@@ -7,9 +7,7 @@ import { setMovies } from "./state/actions";
 import { useMovie } from "./state/useMovie";
 
 function App() {
-  const {
-    context: { dispatch },
-  } = useMovie();
+  const { dispatch } = useMovie();
 
   useEffect(() => {
     dispatch(setMovies(DUMMY_DATA));
