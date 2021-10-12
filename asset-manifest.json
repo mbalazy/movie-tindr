@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.js": "/movie-tindr/static/js/main.76740d10.chunk.js",
+    "main.js.map": "/movie-tindr/static/js/main.76740d10.chunk.js.map",
+    "runtime-main.js": "/movie-tindr/static/js/runtime-main.240b6f4f.js",
+    "runtime-main.js.map": "/movie-tindr/static/js/runtime-main.240b6f4f.js.map",
+    "static/css/2.8a6575f5.chunk.css": "/movie-tindr/static/css/2.8a6575f5.chunk.css",
+    "static/js/2.c7b1b6f8.chunk.js": "/movie-tindr/static/js/2.c7b1b6f8.chunk.js",
+    "static/js/2.c7b1b6f8.chunk.js.map": "/movie-tindr/static/js/2.c7b1b6f8.chunk.js.map",
+    "index.html": "/movie-tindr/index.html",
+    "static/css/2.8a6575f5.chunk.css.map": "/movie-tindr/static/css/2.8a6575f5.chunk.css.map",
+    "static/js/2.c7b1b6f8.chunk.js.LICENSE.txt": "/movie-tindr/static/js/2.c7b1b6f8.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/movie-tindr/static/media/montserrat-vietnamese-400-normal.968b706e.woff2"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.240b6f4f.js",
+    "static/css/2.8a6575f5.chunk.css",
+    "static/js/2.c7b1b6f8.chunk.js",
+    "static/js/main.76740d10.chunk.js"
+  ]
+}
