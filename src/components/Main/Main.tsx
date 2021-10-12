@@ -1,4 +1,4 @@
-import { MovieCart } from "../MovieCart/MovieCart";
+import { MovieCard } from "../MovieCard/MovieCard";
 import { MainInnerWrapper, MainWrapper } from "./Main.style";
 import { useMovie } from "../../state/useMovie";
 
@@ -9,7 +9,7 @@ export const Main = () => {
     <MainWrapper>
       <MainInnerWrapper>
         {currentMovie ? (
-          <MovieCart {...currentMovie} />
+          <MovieCard {...currentMovie} />
         ) : (
           <p>There is no more films sugestions</p>
         )}

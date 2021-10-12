@@ -1,7 +1,7 @@
 import { Buttons } from "../Buttons/Buttons";
 import { Details } from "../Details/Details";
 import { MoviePoster } from "../MoviePoster/MoviePoster";
-import { MovieCartWrapper } from "./MovieCart.style";
+import { MovieCardWrapper } from "./MovieCard.style";
 
 type ContentProps = {
   imageUrl: string;
@@ -10,13 +10,13 @@ type ContentProps = {
   summary: string;
 };
 
-export const MovieCart = ({ title, rating, summary, imageUrl }: ContentProps) => {
+export const MovieCard = ({ title, rating, summary, imageUrl }: ContentProps) => {
   return (
-    <MovieCartWrapper >
+    <MovieCardWrapper >
       <MoviePoster src={imageUrl} />
       <Details title={title} rating={rating} summary={summary} />
       <Buttons />
-    </MovieCartWrapper>
+    </MovieCardWrapper>
   );
 };
 
