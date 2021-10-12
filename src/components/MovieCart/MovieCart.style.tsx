@@ -11,7 +11,7 @@ export const MovieCartWrapper = styled.div`
   ${({ theme: { down, breakpoints } }) => css`
     ${down(breakpoints.l)} {
       grid-template-columns: 1fr 1fr;
-      grid-template-rows: 14rem 10rem 24rem 10rem;
+      grid-template-rows: 14rem 10rem 18rem 8rem;
       gap: 2.4rem;
     }
   `}

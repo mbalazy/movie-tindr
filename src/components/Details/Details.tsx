@@ -9,8 +9,8 @@ type DetailsProps = {
 export const Details = ({ title, rating, summary }: DetailsProps) => {
   return (
     <>
-      <MovieTitle>{title}</MovieTitle>
-      <MovieRating>{rating}/10</MovieRating>
+      <MovieTitle><h3>{title}</h3></MovieTitle>
+      <MovieRating><p>{rating}/10</p></MovieRating>
       <MovieSummary>
         <p>{summary}</p>
       </MovieSummary>
